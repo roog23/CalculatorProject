@@ -15,7 +15,7 @@ public class Main {
                     cal.setNumber1(sc.nextDouble());
                     break;
                 } catch (Exception e) {
-                    System.out.print("올바른 입력값이 아닙니다. ");
+                    System.out.println("올바른 입력값이 아닙니다. ");
                     sc.nextLine();
                 }
             }

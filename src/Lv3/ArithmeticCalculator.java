@@ -24,12 +24,8 @@ public class ArithmeticCalculator<T> {
         return num2;
     }
 
-    Double calculator(char sign) {
-        double result = 0;
-        if (sign == '+')        result = (double)num1 + (double)num2;
-        else if (sign =='-')     result = (double)num1 - (double)num2;
-        else if (sign == '*')    result = (double)num1 * (double)num2;
-        else if (sign == '/')    result = (double)num1 / (double)num2;
+    Double calculator(char sign1) {
+        double result = sign.calculator((double)num1,(double)num2,sign1);
         ResultList.add(result);
         return result;
     }

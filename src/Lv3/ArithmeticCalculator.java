@@ -1,48 +1,48 @@
 package Lv3;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ArithmeticCalculator<T> {
     private T num1,num2;
-    private ArrayList<Double> ResultList = new ArrayList<>();
+    private List<Double> ResultList = new ArrayList<>();
 
-    public void SetNumber1(T num){
+    public void setNumber1(T num) {
         this.num1= num;
     }
 
-    public void SetNumber2(T num){
+    public void setNumber2(T num) {
         this.num2= num;
     }
 
-    public T GetNumber1() {
+    public T getNumber1() {
         return num1;
     }
 
-    public T GetNumber2(){
+    public T getNumber2() {
         return num2;
     }
 
-    Double calculator(char sign){
-        double result =0;
+    Double calculator(char sign) {
+        double result = 0;
         if (sign == '+')        result = (double)num1 + (double)num2;
-        else if(sign =='-')     result = (double)num1 - (double)num2;
-        else if(sign == '*')    result = (double)num1 * (double)num2;
-        else if(sign == '/')    result = (double)num1 / (double)num2;
+        else if (sign =='-')     result = (double)num1 - (double)num2;
+        else if (sign == '*')    result = (double)num1 * (double)num2;
+        else if (sign == '/')    result = (double)num1 / (double)num2;
         ResultList.add(result);
         return result;
     }
 
-    public void CheckResult(double checkNum){
-        int cnt=0;
-        for(Double check : ResultList){
-            if(check>checkNum){
-                System.out.print(check+" ");
-                cnt++;
-            }
+    public void checkResult(double checkNum) {
+        List<Double> ret = ResultList.stream()
+                                     .filter(num -> num > checkNum)
+                                     .collect(Collectors.toList());
+        if (ret.isEmpty()) {
+            System.out.println("입력한 값보다 큰 결과값이 없습니다.");
         }
-        if(cnt==0){
-            System.out.print("입력한 값보다 큰 결과값이 없습니다.");
+        else {
+            System.out.println(ret);
         }
-        System.out.println();
     }
 }

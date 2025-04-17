@@ -12,7 +12,7 @@ public class Main {
             while(true) {
                 System.out.print("첫번째 숫자를 입력해주세요 : ");
                 try {
-                    cal.SetNumber1(sc.nextDouble());
+                    cal.setNumber1(sc.nextDouble());
                     break;
                 } catch (Exception e) {
                     System.out.print("올바른 입력값이 아닙니다. ");
@@ -20,18 +20,18 @@ public class Main {
                 }
             }
 
-            while(true){
+            while(true) {
                 System.out.print("두번째 숫자를 입력해주세요 : ");
                 try {
-                    cal.SetNumber2(sc.nextDouble());
+                    cal.setNumber2(sc.nextDouble());
                     break;
                 } catch (Exception e) {
-                    System.out.print("올바른 입력값이 아닙니다. ");
+                    System.out.println("올바른 입력값이 아닙니다. ");
                     sc.nextLine();
                 }
             }
 
-            while(true){
+            while(true) {
                 System.out.print("연산할 기호를 입력해주세요 : ");
                 String pick = sc.next();
                 if (pick.equals("+") || pick.equals("-") || pick.equals("*") || pick.equals("/")) {
@@ -41,7 +41,7 @@ public class Main {
                 System.out.println("올바른 입력값이 아닙니다.");
             }
 
-            if(sign=='/' && cal.GetNumber2()==0){
+            if(sign=='/' && cal.getNumber2()==0) {
                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
             }
             else {
@@ -50,7 +50,7 @@ public class Main {
             }
 
             System.out.print("원하는 값보다 큰 값의 계산 결과를 출력합니다.");
-            cal.CheckResult(sc.nextDouble());
+            cal.checkResult(sc.nextDouble());
 
             System.out.print("계산기를 계속 사용하시겠습니까? (exit 입력 시에만 종료됩니다.) : ");
             String check = sc.next();

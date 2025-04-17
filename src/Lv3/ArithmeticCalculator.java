@@ -24,8 +24,8 @@ public class ArithmeticCalculator<T> {
         return num2;
     }
 
-    Double calculator(char sign1) {
-        double result = sign.calculator((double)num1,(double)num2,sign1);
+    Double calculator(char sign) {
+        double result = OperatorType.calculator((double)num1,(double)num2,sign);
         ResultList.add(result);
         return result;
     }

@@ -49,6 +49,9 @@ public class Main {
                 System.out.println("연산 결과 : "+result);
             }
 
+            System.out.print("원하는 값보다 큰 값의 계산 결과를 출력합니다.");
+            cal.CheckResult(sc.nextDouble());
+
             System.out.print("계산기를 계속 사용하시겠습니까? (exit 입력 시에만 종료됩니다.) : ");
             String check = sc.next();
             if (check.equals("exit")) {

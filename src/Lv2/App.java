@@ -19,9 +19,9 @@ public class App {
             // 올바른 입력값 양의 정수(0 포함)를 입력 받을 때까지 반복됩니다.
             do {
                 System.out.print("첫번째 양의 정수(0 포함)를 입력하세요 : ");
-                try {
-                    num1 = sc.nextInt();    // int 형의 입력이 들어온 경우 진행됩니다.
-                } catch (Exception e) {     // int 형 외의 입력이 들어온 예외를 처리하는 방법입니다.
+                try {   // 예외가 발생할 수 있는 경우입니다.
+                    num1 = sc.nextInt();
+                } catch (Exception e) {     // 예외 발생 시 처리하는 방법입니다.
                     System.out.print("올바른 입력값이 아닙니다. ");
                     sc.nextLine();
                 }

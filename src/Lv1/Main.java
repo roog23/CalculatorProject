@@ -11,9 +11,9 @@ public class Main {
         while (true) {
             // 정수를 입력 받고, int 형이 아닌 입력이 들어오면 계산기를 처음으로 되돌립니다.
             System.out.print("첫번째 정수를 입력하세요 : ");
-            try {
-                num1 = sc.nextInt();    // int 형의 입력이 들어온 경우 진행됩니다.
-            } catch (Exception e) {     // int 형 외의 입력이 들어온 예외를 처리하는 방법입니다.
+            try {   // 예외가 발생할 수 있는 경우입니다.
+                num1 = sc.nextInt();
+            } catch (Exception e) {     // 예외 발생 시 처리하는 방법입니다.
                 System.out.println("올바른 입력값이 아닙니다. 처음으로 돌아갑니다.");
                 sc.nextLine();
                 continue;

@@ -13,10 +13,10 @@ public class Main {
             // 올바른 입력이 있을 때까지 반복됩니다.
             while(true) {
                 System.out.print("첫번째 숫자를 입력해주세요 : ");
-                try {   // 올바르게 입력된 경우 처리 방법입니다.
+                try {   // 예외가 발생할 수 있는 경우입니다.
                     cal.setNumber1(sc.nextDouble());
                     break;
-                } catch (Exception e) {     // 입력이 잘못된 경우 처리 방법입니다.
+                } catch (Exception e) {     // 예외 발생 시 처리 방법입니다.
                     System.out.println("올바른 입력값이 아닙니다. ");
                     sc.nextLine();
                 }

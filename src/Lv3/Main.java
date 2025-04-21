@@ -53,8 +53,18 @@ public class Main {
                 System.out.println("연산 결과 : "+ cal.calculator(sign));   // 계산 기능을 수행합니다.
             }
 
-            System.out.print("원하는 값보다 큰 값의 계산 결과를 출력합니다.");
-            cal.checkResult(sc.nextDouble());   // 입력 값보다 큰 계산 결과들을 출력합니다.
+            // 입력 값보다 큰 계산 결과들을 출력합니다.
+            while(true) {
+                System.out.print("원하는 값보다 큰 값의 계산 결과를 출력합니다.");
+                try {
+                    cal.checkResult(sc.nextDouble());
+                    break;
+                } catch (Exception e) {
+                    System.out.println("올바른 입력값이 아닙니다. ");
+                    sc.nextLine();
+                }
+            }
+
 
             // 작업을 종료시키기 위한 입력을 받아 처리합니다.
             System.out.print("계산기를 계속 사용하시겠습니까? (exit 입력 시에만 종료됩니다.) : ");
